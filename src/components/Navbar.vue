@@ -15,7 +15,7 @@
             </nav>
         </div>
 
-        <a id="logo">
+        <a id="logo" v-on:click="mostrarMensajeInicial">
             <img src="../assets/variedad/logo.png" title="Juan Mazon">
         </a>
 
@@ -25,6 +25,19 @@
         </a>
     </header>
 </template>
+
+<script setup>
+  function mostrarMensajeInicial() {
+
+    if (confirm('Bienvenido a mi sitio')) {
+      alert('¡Gracias por visitarnos!');
+    } else {
+      alert('...');
+    }
+
+  }
+
+</script>
 
 <script>
     export default {
